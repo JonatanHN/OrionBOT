@@ -210,15 +210,15 @@ client.on("message", (message) => {
     } //end switch
 
     // Ayuda
-        if (message.content.startsWith(prefix + 'allhelp')) {
+        if (message.content.startsWith(prefix + 'trollfriends')) {
             message.channel.send('**COMANDOS DEL SERVIDOR **\n```\n' +
-                '-> ' + prefix + 'ping   :: Comprueba la latencia del bot y de tus mensajes.\n' +
-                '-> ' + prefix + 'lbf         :: Muestra información sobre el team de personas.\n' +
-                '-> ' + prefix + '        :: Proximamente.\n' +
-                '-> ' + prefix + ' :: Proximamente.\n' +
-                '-> ' + '!>' + 'play   :: Este comando funciona para reproducir musica solo agg el nombre de la cancion dejando un espacio entre la palabra play namesong.\n' +
-                '-> ' + prefix + 'hola   :: Retorna un saludo como mensaje.\n```\n\n' +
-                '**DragonBOT - Server guía y de soporte Únete :**\nhttps://discord.gg/v4PkqmK');
+                '-> ' + prefix + 'fckyou   :: Le das amor a tu oponente.\n' +
+                '-> ' + prefix + 'cmsr     :: Le sacas la cmsr a tu oponente.\n' +
+                '-> ' + prefix + 'ctm      :: Mandas a chingar a su madre a tu oponente.\n' +
+                '-> ' + prefix + 'comingsoon   :: Proximamente.\n' +
+                '-> ' + prefix + 'comingsoon   :: Proximamente.\n' +
+                '-> ' + prefix + 'comingsoon   :: Proximamente.\n```\n\n' +
+                '**OrionBOT ✨ - Server guía y de soporte Únete :**\nhttps://discord.gg/57KEJGf');
         } // Termino de ayuda
     // Ayuda
     if (message.content.startsWith(prefix + 'help')) {
@@ -230,7 +230,7 @@ client.on("message", (message) => {
             '-> ' + prefix + 'coomingsoon 	       :: Proximamente.\n' +
             '-> ' + '!>' + 'play   :: Este comando funciona para reproducir musica solo agg el nombre de la cancion dejando un espacio entre la palabra play namesong.\n' +
             '-> ' + prefix + 'hola :: Retorna un saludo como mensaje.\n```\n\n' +
-            '**DragonBOT - Server guía y de soporte Únete :**\nhttps://discord.gg/v4PkqmK');
+            '**OrionBOT ✨ - Server guía y de soporte Únete :**\nhttps://discord.gg/57KEJGf');
     } // Termino de ayuda
     // INICIO DE AYUDA PARA ADD
     if (message.member.hasPermission(['ADMINISTRATOR'])) {
@@ -245,7 +245,7 @@ client.on("message", (message) => {
                 '-> ' + prefix + 'coomingsoon <@user>   :: Nada aun.\n' +
                 '-> ' + prefix + 'coomingsoon <@user>   :: Nada aun.\n' +
                 '-> ' + prefix + 'coomingsoon :: Nada aun.\n```\n\n' +
-                '**DragonBOT - Server guía y de soporte Únete :**\nhttps://discord.gg/v4PkqmK');
+                '**OrionBOT ✨ - Server guía y de soporte Únete :**\nhttps://discord.gg/57KEJGf');
         }
     }
     //TERMINO DE AYUDA PARA ADMINISTRACION
