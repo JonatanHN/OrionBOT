@@ -214,7 +214,10 @@ client.on("message", (message) => {
             break;
             //avatar
         case "avatar": 
-             message.reply(message.author.displayAvatarURL());
+             message.send({embed: {
+                color: 3447003,
+                description: message.author.displayAvatarURL()
+             }});
             break;
     } //end switch
 
