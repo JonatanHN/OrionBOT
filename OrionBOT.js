@@ -218,7 +218,7 @@ client.on("message", (message) => {
                 '-> ' + prefix + 'comingsoon   :: Proximamente.\n' +
                 '-> ' + prefix + 'comingsoon   :: Proximamente.\n' +
                 '-> ' + prefix + 'comingsoon   :: Proximamente.\n```\n\n' +
-                '**OrionBOT ✨ - Server guía y de soporte Únete :**\nhttps://discord.gg/57KEJGf');
+                '**OrionBOT ✨ - Server guía y de soporte Únete :**\nhttps://discord.gg/2Q72uhv');
         } // Termino de ayuda
     // Ayuda
     if (message.content.startsWith(prefix + 'help')) {
@@ -230,7 +230,7 @@ client.on("message", (message) => {
             '-> ' + prefix + 'coomingsoon 	       :: Proximamente.\n' +
             '-> ' + '!>' + 'play   :: Este comando funciona para reproducir musica solo agg el nombre de la cancion dejando un espacio entre la palabra play namesong.\n' +
             '-> ' + prefix + 'hola :: Retorna un saludo como mensaje.\n```\n\n' +
-            '**OrionBOT ✨ - Server guía y de soporte Únete :**\nhttps://discord.gg/57KEJGf');
+            '**OrionBOT ✨ - Server guía y de soporte Únete :**\nhttps://discord.gg/2Q72uhv');
     } // Termino de ayuda
     // INICIO DE AYUDA PARA ADD
     if (message.member.hasPermission(['ADMINISTRATOR'])) {
@@ -245,7 +245,7 @@ client.on("message", (message) => {
                 '-> ' + prefix + 'coomingsoon <@user>   :: Nada aun.\n' +
                 '-> ' + prefix + 'coomingsoon <@user>   :: Nada aun.\n' +
                 '-> ' + prefix + 'coomingsoon :: Nada aun.\n```\n\n' +
-                '**OrionBOT ✨ - Server guía y de soporte Únete :**\nhttps://discord.gg/57KEJGf');
+                '**OrionBOT ✨ - Server guía y de soporte Únete :**\nhttps://discord.gg/2Q72uhv');
         }
     }
     //TERMINO DE AYUDA PARA ADMINISTRACION
