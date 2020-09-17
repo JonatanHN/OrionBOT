@@ -234,8 +234,10 @@ client.on("message", (message) => {
         case "avatar": 
              message.reply({embed: {
                 color: 3447003,
-                description: message.author.displayAvatarURL()
-                .setImage(message.author.displayAvatarURL())
+                description: 'You',
+                image: {
+                url: message.author.displayAvatarURL()
+                }
              }});
             break;
     } //end switch
