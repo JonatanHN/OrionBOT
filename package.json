@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "node OrionBOT.js",
-        "lbfcrewonline": "nodemon -e js --exec \"npm start\""
+        "livebot": "nodemon -e js --exec \"npm start\""
     },
     "keywords": [],
     "author": "",

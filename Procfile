@@ -1,1 +1,1 @@
-worker: npm run drakonline
+worker: npm run livebot
