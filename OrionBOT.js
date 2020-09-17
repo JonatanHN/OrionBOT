@@ -97,6 +97,12 @@ client.on("message", (message) => {
     }
 
     // End variables
+    //more embeds
+    const bodyembed = {embed: {
+      color: 3447003,
+      description: "Esto es un simple mensaje embed."
+    }}
+
     // Argumentos
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
@@ -206,7 +212,10 @@ client.on("message", (message) => {
         case "ctm":
             message.channel.send(`${user.username} haz chingado a tu madre de parte de ${author}`);
             break;
-            //End Kick
+            //avatar
+        case "avatar": 
+             message.reply(message.author.displayAvatarURL());
+            break;
     } //end switch
 
     // Ayuda

@@ -2,7 +2,7 @@
     "name": "DBOT",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "OrionBOT.js",
     "scripts": {
         "start": "node OrionBOT.js",
         "livebot": "nodemon -e js --exec \"npm start\""
