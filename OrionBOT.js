@@ -256,10 +256,7 @@ client.on("message", (message) => {
                   "name": "Usuarios del Servidor 🌟",
                   "value": `↢ ${message.guild.memberCount} ↣`
                 }
-                ],
-                image: {
-                url: message.author.displayAvatarURL()
-                }
+                ]
             }});
             break;
             
