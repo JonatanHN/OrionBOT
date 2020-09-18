@@ -251,13 +251,11 @@ client.on("message", (message) => {
                 },
                 {
                   "name": "Servidor Actual",
-                  "value": `${message.guild.name}`,
-                  "inline": true
+                  "value": `${message.guild.name}`
                 },
                 {
                   "name": "Usuarios del Servidor",
-                  "value": `${message.guild.memberCount}`,
-                  "inline": true
+                  "value": `${message.guild.memberCount}`
                 }
                 ],
                 image: {
