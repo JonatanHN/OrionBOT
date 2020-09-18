@@ -245,7 +245,7 @@ client.on("message", (message) => {
                 },
                 {
                   "name": "ID 🔐",
-                  "value":  `⇋ ${message.author.id} ⇋`,
+                  "value":  `${message.author.id}`,
                   "inline": true
                 },
                 {
