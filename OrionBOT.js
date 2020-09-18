@@ -240,22 +240,21 @@ client.on("message", (message) => {
                 "fields": [
                 {
                 "name": "Username",
-                 "value": `${message.author.username}`,
+                 "value": `**${message.author.username}**`,
                  "inline": true
                 },
                 {
                   "name": "ID",
-                  "value": `${message.author.id} 
-                  \n `,
+                  "value":  `⇋ ${message.author.id} ⇋`,
                   "inline": true
                 },
                 {
                   "name": "Servidor Actual",
-                  "value": `${message.guild.name}`
+                  "value": `**(ツ) ${message.guild.name} (ツ) **`
                 },
                 {
                   "name": "Usuarios del Servidor",
-                  "value": `${message.guild.memberCount}`
+                  "value": `↢ ${message.guild.memberCount} ↣`
                 }
                 ],
                 image: {
