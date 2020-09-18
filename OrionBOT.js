@@ -108,6 +108,9 @@ client.on("message", (message) => {
     // Argumentos
     const args = message.content.slice(prefix.length).trim().split(' ');
     const command = args.shift().toLowerCase();
+    let texto = args.join(" ");
+    let user = message.mentions.users.first();
+    let razon = args.slice(1).join(' ');
     // Fin de argumentos
     // Comandos
     //AmongUS
@@ -267,6 +270,12 @@ client.on("message", (message) => {
                 }
                 ]
             }});
+            break;
+            case "blowjob":
+                message.channel.send(`**${message.author.username}** le ha dado una mamada a **${user.username}** con demasiado esfuerzo, amor, y empeño ❤`);
+            break;
+            case "noblow":
+                message.channel.send(`**${message.author.username}** le ha rechazado una mamada a  **${user.username}**`);
             break;
             
     } //end switch
