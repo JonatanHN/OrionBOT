@@ -106,14 +106,31 @@ client.on("message", (message) => {
     }}
 
     // Argumentos
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const args = message.content.slice(prefix.length).trim().split(' ');
     const command = args.shift().toLowerCase();
-    let texto = args.join(" ");
-    let user = message.mentions.users.first();
-    let razon = args.slice(1).join(' ');
     // Fin de argumentos
     // Comandos
+    //AmongUS
+   if (command === 'codeamong') {
+    if (!args.length) {
+        return message.channel.send(`No haz introducido el codigo en el campo, ${message.author}!`);
+    }
+    else if (args[0] === 'undefined') {
+        return message.channel.send('ingresa datos');
+    }
+    message.channel.send({embed: {
+      color: 15158332,
+      description: `Codigo de partida para among @everyone`,
+      "fields": [
+                {
+                "name": "CODIGO",
+                 "value": '```' + args[0] + '```',
+                 "inline": true
+                }
+                ]
+    }})
 
+    } //End codeamong
     // JonatanHN
     if (message.content.startsWith(prefix + "JonatanHN")) {
         message.channel.send({
@@ -144,14 +161,6 @@ client.on("message", (message) => {
         });
     }
     // End JonatanHN
-    //AmongUS
-    if (message.content.startsWith(prefix + 'codeamong')) {
-    const numberUser = message.content;
-        message.channel.send({embed: {
-                color: 3066993,
-                description: `**Numero de la sala: ✨   ✨**`
-            }});
-    }
     //more commands
     // switch
     switch (command) {
