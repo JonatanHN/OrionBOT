@@ -3,6 +3,8 @@ const client = new Discord.Client();
 const config = require("./config.json");
 var prefix = config.prefix;
 
+
+
 // Confirmamos si el bot esta encendido
 client.on('ready', () => {
     console.log('lbfcrew encendido correctamente!!!');
@@ -141,25 +143,16 @@ client.on("message", (message) => {
             }
         });
     }
-    // End JonatanHN 
+    // End JonatanHN
+    //AmongUS
+    if (message.content.startsWith(prefix + 'codeamong')) {
+    const numberUser = message.content;
+        message.channel.send({embed: {
+                color: 3066993,
+                description: `**Numero de la sala: ✨   ✨**`
+            }});
+    }
     //more commands
-    const exampleEmbed = new Discord.MessageEmbed()
-    .setColor('#0099ff')
-    .setTitle('Some title')
-    .setURL('https://discord.js.org/')
-    .setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
-    .setDescription('Some description here')
-    .setThumbnail('https://i.imgur.com/wSTFkRM.png')
-    .addFields(
-        { name: 'Regular field title', value: 'Some value here' },
-        { name: '\u200B', value: '\u200B' },
-        { name: 'Inline field title', value: 'Some value here', inline: true },
-        { name: 'Inline field title', value: 'Some value here', inline: true },
-    )
-    .addField('Inline field title', 'Some value here', true)
-    .setImage('https://i.imgur.com/wSTFkRM.png')
-    .setTimestamp()
-    .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
     // switch
     switch (command) {
         // Ping
@@ -233,13 +226,46 @@ client.on("message", (message) => {
             //avatar
         case "avatar": 
              message.reply({embed: {
-                color: 3447003,
-                description: 'You',
+                color: 3066993,
+                description: `**Este es tu avatar**`,
                 image: {
                 url: message.author.displayAvatarURL()
                 }
-             }});
+             }})
             break;
+        case "server":
+            message.channel.send({embed: {
+                color: 3066993,
+                description: `** ✨ Orion Data Server ✨ **`,
+                "fields": [
+                {
+                "name": "Username",
+                 "value": `${message.author.username}`,
+                 "inline": true
+                },
+                {
+                  "name": "ID",
+                  "value": `${message.author.id} 
+                  \n `,
+                  "inline": true
+                },
+                {
+                  "name": "Servidor Actual",
+                  "value": `${message.guild.name}`,
+                  "inline": true
+                },
+                {
+                  "name": "Usuarios del Servidor",
+                  "value": `${message.guild.memberCount}`,
+                  "inline": true
+                }
+                ],
+                image: {
+                url: message.author.displayAvatarURL()
+                }
+            }});
+            break;
+            
     } //end switch
 
     // Ayuda
