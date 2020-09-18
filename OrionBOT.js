@@ -239,21 +239,21 @@ client.on("message", (message) => {
                 description: `** ✨ Orion Data Server ✨ **`,
                 "fields": [
                 {
-                "name": "Username",
+                "name": "Username 🐱‍👤",
                  "value": `**${message.author.username}**`,
                  "inline": true
                 },
                 {
-                  "name": "ID",
+                  "name": "ID 🔐",
                   "value":  `⇋ ${message.author.id} ⇋`,
                   "inline": true
                 },
                 {
-                  "name": "Servidor Actual",
+                  "name": "Servidor Actual 🌀",
                   "value": `**(ツ) ${message.guild.name} (ツ) **`
                 },
                 {
-                  "name": "Usuarios del Servidor",
+                  "name": "Usuarios del Servidor 🌟",
                   "value": `↢ ${message.guild.memberCount} ↣`
                 }
                 ],
