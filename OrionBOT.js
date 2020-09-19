@@ -313,7 +313,7 @@ client.on("message", (message) => {
                 '👉🏻 ' + prefix + 'zorra    :: Insultas a tu oponente por Zorra(o).\n' +
                 '👉🏻 ' + prefix + 'ctm      :: Mandas a chingar a su madre a tu oponente.\n' +
                 '👉🏻 ' + prefix + 'senton   :: Darle un senton a tu oponente.\n' +
-                '👉🏻 ' + prefix + 'mesenton   :: Obligar a que te de un senon tu oponente.\n' +
+                '👉🏻 ' + prefix + 'mesenton   :: Obligar a que te de un senton tu oponente.\n' +
                 '👉🏻 ' + prefix + 'nosenton   :: No dar ni recibir sentones.\n' +
                 '👉🏻 ' + prefix + '🥚🥚      :: Huevos para tu oponente.\n' +
                 '👉🏻 ' + prefix + 'blowjob   :: Darle cariño a tu oponente.\n' +
