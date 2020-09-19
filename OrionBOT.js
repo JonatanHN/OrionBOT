@@ -135,7 +135,7 @@ client.on("message", (message) => {
 
     } //End codeamong
     // JonatanHN
-    if (message.content.startsWith(prefix + "JonatanHN")) {
+    if (message.content.startsWith(prefix + "credits")) {
         message.channel.send({
             embed: {
                 color: 3066993,
@@ -171,17 +171,19 @@ client.on("message", (message) => {
         case "ping":
             message.channel.send('Pong!');
             break;
-            // End ping
-        case "🥚🥚":
-            message.channel.send(`webos pal ${user.username} 🥚🥚`);
-            break;
-            // Avisos
+        // End ping
+        // Avisos
         case "aviso":
             if (!texto) return message.channel.send(`Escriba un contenido pára decir.`);
             message.channel.send('**' + texto + '**');
             break;
-            // End Avisos
-            // Ban
+        // End Avisos    
+        /*
+
+           START SECTION ADMINISTRATION
+
+        */
+        // Ban
         case "ban":
             if (message.member.hasPermission(['ADMINISTRATOR'])) {
                 if (message.mentions.users.size < 1) return message.reply(malsintax1).catch(console.error);
@@ -216,26 +218,52 @@ client.on("message", (message) => {
                 message.channel.send(rolenf);
             }
             break;
-            // Hola
+        /*
+
+            END SECTION ADMINISTRATION
+
+        */
+        // Hola
         case "hola":
             message.channel.send(saludo);
             break;
         case "servidor":
             message.channel.send();
             break;
-        case "lbf":
-            message.channel.send('en desarrollo mi crack');
-            break;
+        //Commands Troll
         case "cmsr":
-            message.channel.send(`${author} le ha sacado la csmr a ${user.username}`);
+            message.channel.send(`${author} le ha sacado la csmr a ${user.username} 👼🏻`);
             break;
         case "fckyou":
-            message.channel.send(`${author} se ha cogido a ${user.username}`);
+            message.channel.send(`${author} se ha cogido a ${user.username} 👉🏻👌🏻`);
             break;
         case "ctm":
-            message.channel.send(`${user.username} haz chingado a tu madre de parte de ${author}`);
+            message.channel.send(`${user.username} haz chingado a tu madre de parte de ${author} .l.`);
             break;
-            //avatar
+        case "blowjob":
+                message.channel.send(`**${message.author.username}** le ha dado una mamada a **${user.username}** con demasiado esfuerzo, amor, y empeño ❤`);
+            break;
+        case "noblow":
+                message.channel.send(`**${message.author.username}** le ha rechazado una mamada a  **${user.username}** 😥😪`);
+            break;
+        case "🥚🥚":
+            message.channel.send(`Huevos pal ${user.username} 🥚🥚`);
+            break;
+        case "mesenton":
+            message.channel.send(`**${user.username}** le ha dado un SENTOOOON MASIVO a **${message.author.username}** 😮😮😮😮`)
+            break;
+        case "senton":
+            message.channel.send(`**${message.author.username}** le haz dado un SENTOOOON MASIVO a **${user.username}** 😮😮😮😮🎇🎇🎇`)
+            break;
+        case "nosenton":
+            message.channel.send(`**No aceptas ni das sentones** 😄`)
+            break;
+        case "zorra":
+            message.channel.send(`Tremenda(o) Zorra(o) Eres **${user.username}** 🦨`)
+            break;
+
+        //End Commands Troll
+        //avatar
         case "avatar": 
              message.reply({embed: {
                 color: 3066993,
@@ -271,36 +299,39 @@ client.on("message", (message) => {
                 ]
             }});
             break;
-            case "blowjob":
-                message.channel.send(`**${message.author.username}** le ha dado una mamada a **${user.username}** con demasiado esfuerzo, amor, y empeño ❤`);
-            break;
-            case "noblow":
-                message.channel.send(`**${message.author.username}** le ha rechazado una mamada a  **${user.username}**`);
-            break;
             
     } //end switch
-
+    //response bot
+    if (message.content.startsWith('@🌟 Orion ✨#5719')) {
+        message.channel.reply(`Lo siento, soy un bot y aun no estoy desarrollado para contestar cuando me etiquetan :c`)
+    }
     // Ayuda
         if (message.content.startsWith(prefix + 'trollfriends')) {
-            message.channel.send('**COMANDOS DEL SERVIDOR **\n```\n' +
-                '-> ' + prefix + 'fckyou   :: Le das amor a tu oponente.\n' +
-                '-> ' + prefix + 'cmsr     :: Le sacas la cmsr a tu oponente.\n' +
-                '-> ' + prefix + 'ctm      :: Mandas a chingar a su madre a tu oponente.\n' +
-                '-> ' + prefix + 'comingsoon   :: Proximamente.\n' +
-                '-> ' + prefix + 'comingsoon   :: Proximamente.\n' +
-                '-> ' + prefix + 'comingsoon   :: Proximamente.\n```\n\n' +
-                '**OrionBOT ✨ - Server guía y de soporte Únete :**\nhttps://discord.gg/2Q72uhv');
+            message.channel.send('**COMANDOS TROLL PARA LOS AMIGOS**\n```\n' +
+                '👉🏻 ' + prefix + 'fckyou   :: Le das amor a tu oponente.\n' +
+                '👉🏻 ' + prefix + 'cmsr     :: Le sacas la cmsr a tu oponente.\n' +
+                '👉🏻 ' + prefix + 'zorra    :: Insultas a tu oponente por Zorra(o).\n' +
+                '👉🏻 ' + prefix + 'ctm      :: Mandas a chingar a su madre a tu oponente.\n' +
+                '👉🏻 ' + prefix + 'senton   :: Darle un senton a tu oponente.\n' +
+                '👉🏻 ' + prefix + 'mesenton   :: Obligar a que te de un senon tu oponente.\n' +
+                '👉🏻 ' + prefix + 'nosenton   :: No dar ni recibir sentones.\n' +
+                '👉🏻 ' + prefix + '🥚🥚      :: Huevos para tu oponente.\n' +
+                '👉🏻 ' + prefix + 'blowjob   :: Darle cariño a tu oponente.\n' +
+                '👉🏻 ' + prefix + 'noblow    :: No aceptar el cariño de tu oponente.\n```\n\n' +
+                '**OrionBOT ✨ - Server guía**');
         } // Termino de ayuda
-    // Ayuda
-    if (message.content.startsWith(prefix + 'help')) {
+        // Ayuda
+     if (message.content.startsWith(prefix + 'help')) {
         message.channel.send(revisa);
         message.author.send('**COMANDOS DEL SERVIDOR **\n```\n' +
-            '-> ' + prefix + 'ping :: Comprueba la latencia del bot y de tus mensajes.\n' +
-            '-> ' + prefix + 'coomingsoon       :: Proximamente.\n' +
-            '-> ' + prefix + 'coomingsoon      :: Proximamente.\n' +
-            '-> ' + prefix + 'coomingsoon 	       :: Proximamente.\n' +
-            '-> ' + '!>' + 'play   :: Este comando funciona para reproducir musica solo agg el nombre de la cancion dejando un espacio entre la palabra play namesong.\n' +
-            '-> ' + prefix + 'hola :: Retorna un saludo como mensaje.\n```\n\n' +
+            '👉🏻 ' + prefix + 'hola :: Retorna un saludo como mensaje.\n' +
+            '👉🏻 ' + prefix + 'ping :: Comprueba la latencia del bot y de tus mensajes.\n' +
+            '👉🏻 ' + prefix + 'server       :: te da un listado de informacion basica sobre el servidor y tus datos de usuario.\n' +
+            '👉🏻 ' + prefix + 'avatar      :: Muestra tu imagen de perfil.\n' +
+            '👉🏻 ' + prefix + 'aviso 	  :: Muestra un mensaje con forma de aviso.\n' +
+            '👉🏻 ' + prefix + 'trollfriends   :: Comandos tontos para disfrutar con amigos.\n' +
+            '👉🏻 ' + prefix + 'comingsoon   :: Aun se trabaja en mas comandos.\n' +
+            '👉🏻 ' + prefix + 'credits   :: Conoce al creador de este BOT.\n```\n\n' +
             '**OrionBOT ✨ - Server guía y de soporte Únete :**\nhttps://discord.gg/2Q72uhv');
     } // Termino de ayuda
     // INICIO DE AYUDA PARA ADD
@@ -308,15 +339,15 @@ client.on("message", (message) => {
         if (message.content.startsWith(prefix + 'addhelp')) {
             message.channel.send(revisa);
             message.author.send('**COMANDOS DEL SV PARA LA ADD **\n```\n' +
-                '-> ' + prefix + 'ping         :: Chequeas el funcionamiento del bot.\n' +
-                '-> ' + prefix + 'ban  <@user> :: Baneas un usuario.\n' +
-                '-> ' + prefix + 'kick <@user> :: Kickeas un usuario.\n' +
-                '-> ' + prefix + 'aviso        :: Hace que el bot diga un mensaje.\n' +
-                '-> ' + prefix + 'coomingsoon <@user>   :: Nada aun.\n' +
-                '-> ' + prefix + 'coomingsoon <@user>   :: Nada aun.\n' +
-                '-> ' + prefix + 'coomingsoon <@user>   :: Nada aun.\n' +
-                '-> ' + prefix + 'coomingsoon :: Nada aun.\n```\n\n' +
-                '**OrionBOT ✨ - Server guía y de soporte Únete :**\nhttps://discord.gg/2Q72uhv');
+                '👉🏻 ' + prefix + 'ping         :: Chequeas el funcionamiento del bot.\n' +
+                '👉🏻 ' + prefix + 'ban  <@user> Razón :: Baneas un usuario.\n' +
+                '👉🏻 ' + prefix + 'kick <@user> Razón :: Kickeas un usuario.\n' +
+                '👉🏻 ' + prefix + 'aviso        :: Hace que el bot diga un mensaje.\n' +
+                '👉🏻 ' + prefix + 'coomingsoon <@user>   :: Nada aun.\n' +
+                '👉🏻 ' + prefix + 'coomingsoon <@user>   :: Nada aun.\n' +
+                '👉🏻 ' + prefix + 'coomingsoon <@user>   :: Nada aun.\n' +
+                '👉🏻 ' + prefix + 'coomingsoon :: Nada aun.\n```\n\n' +
+                '**OrionBOT ✨ - Server guía**');
         }
     }
     //TERMINO DE AYUDA PARA ADMINISTRACION
