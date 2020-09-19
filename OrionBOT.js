@@ -317,8 +317,7 @@ client.on("message", (message) => {
                 '👉🏻 ' + prefix + 'nosenton   :: No dar ni recibir sentones.\n' +
                 '👉🏻 ' + prefix + '🥚🥚      :: Huevos para tu oponente.\n' +
                 '👉🏻 ' + prefix + 'blowjob   :: Darle cariño a tu oponente.\n' +
-                '👉🏻 ' + prefix + 'noblow    :: No aceptar el cariño de tu oponente.\n```\n\n' +
-                '**OrionBOT ✨ - Server guía**');
+                '👉🏻 ' + prefix + 'noblow    :: No aceptar el cariño de tu oponente.\n```\n');
         } // Termino de ayuda
         // Ayuda
      if (message.content.startsWith(prefix + 'help')) {
