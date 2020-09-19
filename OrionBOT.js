@@ -92,7 +92,7 @@ client.on("message", (message) => {
         embed: {
             color: 15158332,
             author: {
-                icon_url: client.user.avatarURL
+                icon_url: client.user.avatarURL()
             },
             description: `**${author}**, Revisa tus mensajes privados. 📩`
         }
@@ -100,10 +100,12 @@ client.on("message", (message) => {
 
     // End variables
     //more embeds
-    const bodyembed = {embed: {
-      color: 3447003,
-      description: "Esto es un simple mensaje embed."
-    }}
+    const bodyembed = {
+        embed: {
+            color: 3447003,
+            description: "Esto es un simple mensaje embed."
+        }
+    }
 
     // Argumentos
     const args = message.content.slice(prefix.length).trim().split(' ');
@@ -114,24 +116,23 @@ client.on("message", (message) => {
     // Fin de argumentos
     // Comandos
     //AmongUS
-   if (command === 'codeamong') {
-    if (!args.length) {
-        return message.channel.send(`No haz introducido el codigo en el campo, ${message.author}!`);
-    }
-    else if (args[0] === 'undefined') {
-        return message.channel.send('ingresa datos');
-    }
-    message.channel.send({embed: {
-      color: 15158332,
-      description: `Codigo de partida para among @everyone`,
-      "fields": [
-                {
-                "name": "CODIGO",
-                 "value": '```' + args[0] + '```',
-                 "inline": true
-                }
-                ]
-    }})
+    if (command === 'codeamong') {
+        if (!args.length) {
+            return message.channel.send(`No haz introducido el codigo en el campo, ${message.author}!`);
+        } else if (args[0] === 'undefined') {
+            return message.channel.send('ingresa datos');
+        }
+        message.channel.send({
+            embed: {
+                color: 15158332,
+                description: `Codigo de partida para among @everyone`,
+                "fields": [{
+                    "name": "CODIGO",
+                    "value": '```' + args[0] + '```',
+                    "inline": true
+                }]
+            }
+        })
 
     } //End codeamong
     // JonatanHN
@@ -171,19 +172,32 @@ client.on("message", (message) => {
         case "ping":
             message.channel.send('Pong!');
             break;
-        // End ping
-        // Avisos
+            // End ping
+            // Avisos
         case "aviso":
             if (!texto) return message.channel.send(`Escriba un contenido pára decir.`);
-            message.channel.send('**' + texto + '**');
+            message.channel.send({
+                embed: {
+                    color: 15158332,
+                    fields: [{
+                        "name": `AVISO ⚠ \n`,
+                        "value": `@everyone **${texto}** \n`
+                    }],
+                    timestamp: new Date(),
+                    footer: {
+                        icon_url: client.user.avatarURL(),
+                        text: "Avisos ⚠"
+                    }
+                }
+            });
             break;
-        // End Avisos    
-        /*
+            // End Avisos    
+            /*
 
-           START SECTION ADMINISTRATION
+               START SECTION ADMINISTRATION
 
-        */
-        // Ban
+            */
+            // Ban
         case "ban":
             if (message.member.hasPermission(['ADMINISTRATOR'])) {
                 if (message.mentions.users.size < 1) return message.reply(malsintax1).catch(console.error);
@@ -208,29 +222,19 @@ client.on("message", (message) => {
                 message.channel.send(rolenf);
             }
             break;
-        case "kickadm":
-            if (message.member.hasPermission(['KICK_MEMBERS'])) {
-                if (message.mentions.users.size < 1) return message.reply(malsintax1).catch(console.error);
-                if (!razon) return message.channel.send(malsintax);
-                message.guild.member(user).kick(razon);
-                message.channel.send(`**❌${client.user.username} El usuario ${user.username} fue kickeado temporalmente por ||${message.author.username}|| razón: ${razon}.**`);
-            } else {
-                message.channel.send(rolenf);
-            }
-            break;
-        /*
+            /*
 
-            END SECTION ADMINISTRATION
+                END SECTION ADMINISTRATION
 
-        */
-        // Hola
+            */
+            // Hola
         case "hola":
             message.channel.send(saludo);
             break;
         case "servidor":
             message.channel.send();
             break;
-        //Commands Troll
+            //Commands Troll
         case "cmsr":
             message.channel.send(`${author} le ha sacado la csmr a ${user.username} 👼🏻`);
             break;
@@ -241,10 +245,10 @@ client.on("message", (message) => {
             message.channel.send(`${user.username} haz chingado a tu madre de parte de ${author} .l.`);
             break;
         case "blowjob":
-                message.channel.send(`**${message.author.username}** le ha dado una mamada a **${user.username}** con demasiado esfuerzo, amor, y empeño ❤`);
+            message.channel.send(`**${message.author.username}** le ha dado una mamada a **${user.username}** con demasiado esfuerzo, amor, y empeño ❤`);
             break;
         case "noblow":
-                message.channel.send(`**${message.author.username}** le ha rechazado una mamada a  **${user.username}** 😥😪`);
+            message.channel.send(`**${message.author.username}** le ha rechazado una mamada a  **${user.username}** 😥😪`);
             break;
         case "🥚🥚":
             message.channel.send(`Huevos pal ${user.username} 🥚🥚`);
@@ -262,65 +266,68 @@ client.on("message", (message) => {
             message.channel.send(`Tremenda(o) Zorra(o) Eres **${user.username}** 🦨`)
             break;
 
-        //End Commands Troll
-        //avatar
-        case "avatar": 
-             message.reply({embed: {
-                color: 3066993,
-                description: `**Este es tu avatar**`,
-                image: {
-                url: message.author.displayAvatarURL()
+            //End Commands Troll
+            //avatar
+        case "avatar":
+            message.reply({
+                embed: {
+                    color: 3066993,
+                    description: `**Este es tu avatar**`,
+                    image: {
+                        url: message.author.displayAvatarURL()
+                    }
                 }
-             }})
+            })
             break;
         case "server":
-            message.channel.send({embed: {
-                color: 3066993,
-                description: `** ✨ Orion Data Server ✨ **`,
-                "fields": [
-                {
-                "name": "Username 🐱‍👤",
-                 "value": `**${message.author.username}**`,
-                 "inline": true
-                },
-                {
-                  "name": "ID 🔐",
-                  "value":  `${message.author.id}`,
-                  "inline": true
-                },
-                {
-                  "name": "Servidor Actual 🌀",
-                  "value": `**(ツ) ${message.guild.name} (ツ) **`
-                },
-                {
-                  "name": "Usuarios del Servidor 🌟",
-                  "value": `↢ ${message.guild.memberCount} ↣`
+            message.channel.send({
+                embed: {
+                    color: 3066993,
+                    description: `** ✨ Orion Data Server ✨ **`,
+                    "fields": [{
+                            "name": "Username 🐱‍👤",
+                            "value": `**${message.author.username}**`,
+                            "inline": true
+                        },
+                        {
+                            "name": "ID 🔐",
+                            "value": `${message.author.id}`,
+                            "inline": true
+                        },
+                        {
+                            "name": "Servidor Actual 🌀",
+                            "value": `**(ツ) ${message.guild.name} (ツ) **`
+                        },
+                        {
+                            "name": "Usuarios del Servidor 🌟",
+                            "value": `↢ ${message.guild.memberCount} ↣`
+                        }
+                    ]
                 }
-                ]
-            }});
+            });
             break;
-            
+
     } //end switch
     //response bot
     if (message.content.startsWith('@🌟 Orion ✨#5719')) {
         message.channel.reply(`Lo siento, soy un bot y aun no estoy desarrollado para contestar cuando me etiquetan :c`)
     }
     // Ayuda
-        if (message.content.startsWith(prefix + 'trollfriends')) {
-            message.channel.send('**COMANDOS TROLL PARA LOS AMIGOS**\n```\n' +
-                '👉🏻 ' + prefix + 'fckyou   :: Le das amor a tu oponente.\n' +
-                '👉🏻 ' + prefix + 'cmsr     :: Le sacas la cmsr a tu oponente.\n' +
-                '👉🏻 ' + prefix + 'zorra    :: Insultas a tu oponente por Zorra(o).\n' +
-                '👉🏻 ' + prefix + 'ctm      :: Mandas a chingar a su madre a tu oponente.\n' +
-                '👉🏻 ' + prefix + 'senton   :: Darle un senton a tu oponente.\n' +
-                '👉🏻 ' + prefix + 'mesenton   :: Obligar a que te de un senton tu oponente.\n' +
-                '👉🏻 ' + prefix + 'nosenton   :: No dar ni recibir sentones.\n' +
-                '👉🏻 ' + prefix + '🥚🥚      :: Huevos para tu oponente.\n' +
-                '👉🏻 ' + prefix + 'blowjob   :: Darle cariño a tu oponente.\n' +
-                '👉🏻 ' + prefix + 'noblow    :: No aceptar el cariño de tu oponente.\n```\n');
-        } // Termino de ayuda
-        // Ayuda
-     if (message.content.startsWith(prefix + 'help')) {
+    if (message.content.startsWith(prefix + 'trollfriends')) {
+        message.channel.send('**COMANDOS TROLL PARA LOS AMIGOS**\n```\n' +
+            '👉🏻 ' + prefix + 'fckyou   :: Le das amor a tu oponente.\n' +
+            '👉🏻 ' + prefix + 'cmsr     :: Le sacas la cmsr a tu oponente.\n' +
+            '👉🏻 ' + prefix + 'zorra    :: Insultas a tu oponente por Zorra(o).\n' +
+            '👉🏻 ' + prefix + 'ctm      :: Mandas a chingar a su madre a tu oponente.\n' +
+            '👉🏻 ' + prefix + 'senton   :: Darle un senton a tu oponente.\n' +
+            '👉🏻 ' + prefix + 'mesenton   :: Obligar a que te de un senton tu oponente.\n' +
+            '👉🏻 ' + prefix + 'nosenton   :: No dar ni recibir sentones.\n' +
+            '👉🏻 ' + prefix + '🥚🥚      :: Huevos para tu oponente.\n' +
+            '👉🏻 ' + prefix + 'blowjob   :: Darle cariño a tu oponente.\n' +
+            '👉🏻 ' + prefix + 'noblow    :: No aceptar el cariño de tu oponente.\n```\n');
+    } // Termino de ayuda
+    // Ayuda
+    if (message.content.startsWith(prefix + 'help')) {
         message.channel.send(revisa);
         message.author.send('**COMANDOS DEL SERVIDOR **\n```\n' +
             '👉🏻 ' + prefix + 'hola :: Retorna un saludo como mensaje.\n' +
