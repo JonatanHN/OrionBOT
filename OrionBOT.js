@@ -7,7 +7,7 @@ var prefix = config.prefix;
 
 // Confirmamos si el bot esta encendido
 client.on('ready', () => {
-    console.log('lbfcrew encendido correctamente!!!');
+    console.log('botsito ya esta ready!!!');
     client.user.setPresence({ activity: { name: `${client.users.cache.size} miembros >>help`, type: 'WATCHING' }, status: 'online' })
 });
 
