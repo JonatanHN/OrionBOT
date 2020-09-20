@@ -276,7 +276,9 @@ client.on("message", (message) => {
         case "verguiza":
             message.channel.send(`**${message.author.username}** le ha dado una putiza a **${user.username}** 👊🏻👊🏻`)
             break;
-
+        case "deslechar":
+            message.channel.send(`**${user.username}** ha deslechado a **${message.author.username}**`)
+            break;
             //End Commands Troll
             //avatar
         case "avatar":
@@ -331,6 +333,8 @@ client.on("message", (message) => {
             '👉🏻 ' + prefix + 'nosenton   :: No dar ni recibir sentones.\n' +
             '👉🏻 ' + prefix + '🥚🥚      :: Huevos para tu oponente.\n' +
             '👉🏻 ' + prefix + 'blowjob   :: Darle cariño a tu oponente.\n' +
+            '👉🏻 ' + prefix + 'verguiza   :: Darle una verguiza a tu oponente.\n' +
+            '👉🏻 ' + prefix + 'deslechar   :: Tu oponente te deslecha.\n' +
             '👉🏻 ' + prefix + 'noblow    :: No aceptar el cariño de tu oponente.\n```\n');
     } // Termino de ayuda
     // Ayuda
