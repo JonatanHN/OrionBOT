@@ -99,13 +99,6 @@ client.on("message", (message) => {
     }
 
     // End variables
-    //more embeds
-    const bodyembed = {
-        embed: {
-            color: 3447003,
-            description: "Esto es un simple mensaje embed."
-        }
-    }
 
     // Argumentos
     const args = message.content.slice(prefix.length).trim().split(' ');
@@ -176,20 +169,24 @@ client.on("message", (message) => {
             // Avisos
         case "aviso":
             if (!texto) return message.channel.send(`Escriba un contenido pára decir.`);
-            message.channel.send({
-                embed: {
-                    color: 15158332,
-                    fields: [{
-                        "name": `AVISO ⚠ \n`,
-                        "value": `@everyone **${texto}** \n`
-                    }],
-                    timestamp: new Date(),
-                    footer: {
-                        icon_url: client.user.avatarURL(),
-                        text: "Avisos ⚠"
+            if (message.member.hasPermission('ADMINISTRATOR')) {
+                message.channel.send({
+                    embed: {
+                        color: 15158332,
+                        fields: [{
+                            "name": `AVISO ⚠ \n`,
+                            "value": `@everyone **${texto}** \n`
+                        }],
+                        timestamp: new Date(),
+                        footer: {
+                            icon_url: client.user.avatarURL(),
+                            text: "Avisos ⚠"
+                        }
                     }
-                }
-            });
+                });
+            } else {
+                message.channel.send(rolenf)
+            }
             break;
             // End Avisos    
             /*
@@ -217,7 +214,18 @@ client.on("message", (message) => {
                 if (!razon) return message.channel.send(malsintax);
                 if (!message.guild.member(user).bannable) return message.reply(dragonban);
                 message.guild.member(user).kick(razon);
-                message.channel.send(`**❌${client.user.username} El usuario ${user.username} fue kickeado temporalmente por ||${message.author.username}|| razón: ${razon}.**`);
+                message.channel.send(`**${client.user.username} El usuario ${user.username} fue kickeado temporalmente por ||${message.author.username}|| razón: ${razon}.**`);
+            } else {
+                message.channel.send(rolenf);
+            }
+            break;
+        case "kickforce":
+            if (message.member.hasPermission(['KICK_MEMBERS'])) {
+                if (message.mentions.users.size < 1) return message.reply(malsintax1).catch(console.error);
+                if (!razon) return message.channel.send(malsintax);
+                if (!message.guild.member(user).bannable) return message.reply(dragonban);
+                message.guild.member(user).kick(razon);
+                message.channel.send(`**${client.user.username} El usuario ${user.username} fue kickeado temporalmente por ||${message.author.username}|| razón: ${razon}.**`);
             } else {
                 message.channel.send(rolenf);
             }
@@ -235,7 +243,7 @@ client.on("message", (message) => {
             message.channel.send();
             break;
             //Commands Troll
-        case "cmsr":
+        case "csmr":
             message.channel.send(`${author} le ha sacado la csmr a ${user.username} 👼🏻`);
             break;
         case "fckyou":
@@ -264,6 +272,9 @@ client.on("message", (message) => {
             break;
         case "zorra":
             message.channel.send(`Tremenda(o) Zorra(o) Eres **${user.username}** 🦨`)
+            break;
+        case "verguiza":
+            message.channel.send(`**${message.author.username}** le ha dado una putiza a **${user.username}** 👊🏻👊🏻`)
             break;
 
             //End Commands Troll
@@ -308,15 +319,11 @@ client.on("message", (message) => {
             break;
 
     } //end switch
-    //response bot
-    if (message.content.startsWith('@🌟 Orion ✨#5719')) {
-        message.channel.reply(`Lo siento, soy un bot y aun no estoy desarrollado para contestar cuando me etiquetan :c`)
-    }
     // Ayuda
     if (message.content.startsWith(prefix + 'trollfriends')) {
         message.channel.send('**COMANDOS TROLL PARA LOS AMIGOS**\n```\n' +
             '👉🏻 ' + prefix + 'fckyou   :: Le das amor a tu oponente.\n' +
-            '👉🏻 ' + prefix + 'cmsr     :: Le sacas la cmsr a tu oponente.\n' +
+            '👉🏻 ' + prefix + 'csmr     :: Le sacas la csmr a tu oponente.\n' +
             '👉🏻 ' + prefix + 'zorra    :: Insultas a tu oponente por Zorra(o).\n' +
             '👉🏻 ' + prefix + 'ctm      :: Mandas a chingar a su madre a tu oponente.\n' +
             '👉🏻 ' + prefix + 'senton   :: Darle un senton a tu oponente.\n' +
@@ -334,7 +341,7 @@ client.on("message", (message) => {
             '👉🏻 ' + prefix + 'ping :: Comprueba la latencia del bot y de tus mensajes.\n' +
             '👉🏻 ' + prefix + 'server       :: te da un listado de informacion basica sobre el servidor y tus datos de usuario.\n' +
             '👉🏻 ' + prefix + 'avatar      :: Muestra tu imagen de perfil.\n' +
-            '👉🏻 ' + prefix + 'aviso 	  :: Muestra un mensaje con forma de aviso.\n' +
+            '👉🏻 ' + prefix + 'aviso 	  :: Este comando ha sido removido para usuarios comunes.\n' +
             '👉🏻 ' + prefix + 'trollfriends   :: Comandos tontos para disfrutar con amigos.\n' +
             '👉🏻 ' + prefix + 'comingsoon   :: Aun se trabaja en mas comandos.\n' +
             '👉🏻 ' + prefix + 'credits   :: Conoce al creador de este BOT.\n```\n\n' +
