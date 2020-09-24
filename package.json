@@ -1,6 +1,6 @@
 {
-    "name": "DBOT",
-    "version": "1.0.0",
+    "name": "orion",
+    "version": "1.0.3",
     "description": "",
     "main": "OrionBOT.js",
     "scripts": {
@@ -11,7 +11,6 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "discord-youtube-api": "^0.1.0",
         "discord.js": "^12.2.0",
         "dotenv": "^8.2.0",
         "nodemon": "^2.0.4"
