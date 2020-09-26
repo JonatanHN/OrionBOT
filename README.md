@@ -48,8 +48,8 @@
 </br>
 
 
-## How to contribute to the project?
-### Como contribuir en el proyecto?
+## How to contribute to the project
+Como contribuir en el proyecto?
 
 - **Cualquier Contribucion es Excelente**
 - **[Paypal](https://paypal.me/jonatanhn)** 
@@ -65,5 +65,15 @@
 </div>
 
 ---
+
+## Versiones ~ Versions ![](https://img.icons8.com/color/25/000000/versions.png)
+
+<div align="center">
+
+| **Currently**|
+| ----------- |
+| V.1.0.3✔️  | 
+
+</div>
 
 </div>
