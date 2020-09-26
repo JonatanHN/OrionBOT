@@ -16,7 +16,7 @@
 
 </br>
 
-### **Creadores y Contribuidores ~ Creators and Contributors.**
+### ![](https://img.icons8.com/bubbles/50/000000/conference-call.png) **Creadores y Contribuidores ~ Creators and Contributors.**
 * **JonatanHN**: Creador del **BOT** y el encargado de mantenerlo actualmente,
 'Creator of the **BOT** and currently in charge of maintaining it..' 
 
