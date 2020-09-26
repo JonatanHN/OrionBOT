@@ -1,11 +1,10 @@
 <div style="text-align: center">
 
-#  **Orion BOT 🌟**
-
+# ![](https://i.imgur.com/bSZ8JrY.png) **OrionBOT🌟**
+---
 **Orion es:** un bot multiuso, con multiproposíto, y esta creado para facilitar el manejo de usuarios, administracion, comandos, ayuda y en caso de ser programador compartir codigo, ademas es un bot con constante crecimiento, es un bot con constantes actualizaciones y grandes aportes de parte de los **Contribuidores** del mismo.
 
 * **JonatanHN**: Creador del **BOT** y el encargado de mantenerlo actualmente.
-
 
 
 ---
@@ -14,7 +13,4 @@
 
 ---
 
-
-
 </div>
-
