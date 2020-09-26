@@ -15,8 +15,10 @@
 * **JonatanHN**: Creador del **BOT** y el encargado de mantenerlo actualmente,
 'Creator of the **BOT** and currently in charge of maintaining it..' 
 
-<br>
+
 ---
+
+<br>
 
 ### Documentación ![Documents](https://img.icons8.com/cotton/25/000000/regular-document.png)
 
