@@ -57,7 +57,7 @@ Como contribuir en el proyecto?
 
 ### **Creadores y Contribuidores ~ Creators and Contributors**
 - **JonatanHN** 'Creator of the **BOT** and currently in charge of maintaining it..' 
-- **Aqui puedes estar tú**
+- **Here you can be**
 
 
 </br>
@@ -70,6 +70,7 @@ Como contribuir en el proyecto?
 
 <div align="center">
 
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=JonatanHN&show_icons=true&theme=radical&repo=OrionBOT&?theme=dark)](https://github.com/JonatanHN/OrionBOT)
 | **Currently**|
 | ----------- |
 | V.1.0.3✔️  | 
