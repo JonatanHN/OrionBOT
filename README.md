@@ -7,8 +7,6 @@
 * **JonatanHN**: Creador del **BOT** y el encargado de mantenerlo actualmente.
 
 
----
-
 ### Documentación ![Documents](https://img.icons8.com/cotton/25/000000/regular-document.png)
 
 ---
