@@ -248,7 +248,24 @@ client.on('message', (message) => {
     switch (command) {
     // Ping
     case 'ping':
-        message.channel.send('Pong!');
+        message.channel.send('Calculando ping! please wait moment....').then(m => {
+            // The math thingy to calculate the user's ping
+            const ping = m.createdTimestamp - message.createdTimestamp;
+
+            // Basic embed
+            const embed = new Discord.MessageEmbed()
+                .setAuthor(`Tú ping es de ${ping}`)
+                .setColor(0);
+
+            // Then It Edits the message with the ping variable embed that you created
+            m.edit(embed);
+        });
+        break;
+    case '8ball':
+        // message.member.user
+        var rpts = ['Sí', 'No', '¿Por qué?', 'Por favor', 'Tal vez', 'No sé', 'Definitivamente?', ' ¡Claro! ', ' Sí ', ' No ', ' Por supuesto! ', ' Por supuesto que no '];
+        if (!texto) return message.reply('Escriba una pregunta.');
+        message.channel.send(message.author.username + ' a su pregunta `' + texto + '` mi respuesta es: `' + rpts[Math.floor(Math.random() * rpts.length)] + '`');
         break;
         // End ping
         // Avisos
@@ -279,9 +296,9 @@ client.on('message', (message) => {
 
         /*
 
-                                                                                                                                                                           START SECTION ADMINISTRATION
+                                                                                                                                                                                                                   START SECTION ADMINISTRATION
 
-                                                                                                                                                                        */
+                                                                                                                                                                                                                */
         // Ban
     case 'ban':
         if (message.member.hasPermission(['ADMINISTRATOR'])) {
@@ -311,9 +328,9 @@ client.on('message', (message) => {
         break;
         /*
 
-                                                                                                                                                                            END SECTION ADMINISTRATION
+                                                                                                                                                                                                                    END SECTION ADMINISTRATION
 
-                                                                                                                                                                        */
+                                                                                                                                                                                                                */
         // Hola
     case 'hola':
         message.channel.send(saludo);
@@ -627,12 +644,6 @@ client.on('message', (message) => {
             message.channel.send(rolenf);
         }
         break;
-        // Just add any case commands if you want to..
-
-    case 'rolesuser':
-
-        break;
-            // end switch
     }
 
     // INICIO DE AYUDA PARA ADD
