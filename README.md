@@ -51,7 +51,7 @@
 ## How to contribute to the project? ~ Como contribuir en el proyecto?
 
 
-- **Cualquier Contribucion es Excelente**
+- **Any Contribution is Welcome**
 - **[Paypal](https://paypal.me/jonatanhn)** 
 
 
