@@ -1,4 +1,4 @@
-<div style="text-align: center">
+
 
 <img width="150px" src="https://i.imgur.com/kRKOw3o.png"> ![](https://i.imgur.com/bSZ8JrY.png) 
 
@@ -11,17 +11,23 @@
 **Orion is:** a multipurpose bot, with multipurpose, and is created to facilitate user management, administration, commands, help and if you are a programmer share code, it is also a bot with constant growth, it is a bot with constant updates and great contributions from the **Contributors** of the same.
 
 ---
+
+<div align="center">
+
+</br>
+
 ### **Creadores y Contribuidores ~ Creators and Contributors.**
 * **JonatanHN**: Creador del **BOT** y el encargado de mantenerlo actualmente,
 'Creator of the **BOT** and currently in charge of maintaining it..' 
 
+</br>
+
+</div>
 
 ---
-
-<br>
 
 ### Documentación ![Documents](https://img.icons8.com/cotton/25/000000/regular-document.png)
 
 
 
-</div>
+
