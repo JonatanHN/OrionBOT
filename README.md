@@ -68,11 +68,13 @@
 
 ## Versiones ~ Versions ![](https://img.icons8.com/color/25/000000/versions.png)
 
+| **Currently**| **Require** |
+|  ----------- | ----------- |
+|   V.1.0.3    |     ✔️      |
+
+
 <div align="center">
  
-| **Currently**|
-| ----------- |
-| V.1.0.3✔️  | 
 
 [![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=JonatanHN&show_icons=true&theme=radical&repo=OrionBOT&?theme=dark)](https://github.com/JonatanHN/OrionBOT)
 
