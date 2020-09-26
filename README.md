@@ -48,8 +48,8 @@
 </br>
 
 
-## How to contribute to the project
-## Como contribuir en el proyecto?
+## How to contribute to the project? ~ Como contribuir en el proyecto?
+
 
 - **Cualquier Contribucion es Excelente**
 - **[Paypal](https://paypal.me/jonatanhn)** 
