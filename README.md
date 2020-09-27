@@ -32,7 +32,7 @@
     ```npm i```
 - After executing this command you can run the BOT in 2 ways,
 - Despues de ejecutar ese comando ya puedes correr el BOT de 2 Formas:
-```npm start or npm run livebot```
+```npm start``` Or ```npm run livebot```
 
 #### Fixed Errors ~ Reparar errores![](https://img.icons8.com/bubbles/30/000000/delete-sign.png)
 **Required Install npx**
