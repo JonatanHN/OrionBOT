@@ -68,9 +68,9 @@
 
 ## Versiones ~ Versions ![](https://img.icons8.com/color/25/000000/versions.png)
 
-| **Currently**| **Require** |
-|  ----------- | ----------- |
-|   V.1.0.3    |     ✔️      |
+| **Control**  | **Versions** |
+|  ----------- | -----------  |
+|  Currently   |   V1.0.3✔️   |
 
 
 <div align="center">
