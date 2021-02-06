@@ -329,55 +329,6 @@ client.on('message', (message) => {
     case 'hola':
         message.channel.send(saludo);
         break;
-        // Commands Troll
-    case 'csmr':
-        if (message.mentions.users.size < 1) return message.reply(malsintax1).catch(console.error);
-        message.channel.send(`${author} le ha sacado la csmr a ${user.username} 👼🏻`);
-        break;
-    case 'fckyou':
-        if (message.mentions.users.size < 1) return message.reply(malsintax1).catch(console.error);
-        message.channel.send(`${author} se ha cogido a ${user.username} 👉🏻👌🏻`);
-        break;
-    case 'ctm':
-        if (message.mentions.users.size < 1) return message.reply(malsintax1).catch(console.error);
-        message.channel.send(`${user.username} haz chingado a tu madre de parte de ${author} .l.`);
-        break;
-    case 'blowjob':
-        if (message.mentions.users.size < 1) return message.reply(malsintax1).catch(console.error);
-        message.channel.send(`**${message.author.username}** le ha dado una mamada a **${user.username}** con demasiado esfuerzo, amor, y empeño ❤`);
-        break;
-    case 'noblow':
-        if (message.mentions.users.size < 1) return message.reply(malsintax1).catch(console.error);
-        message.channel.send(`**${message.author.username}** le ha rechazado una mamada a  **${user.username}** 😥😪`);
-        break;
-    case '🥚🥚':
-        if (message.mentions.users.size < 1) return message.reply(malsintax1).catch(console.error);
-        message.channel.send(`Huevos pal ${user.username} 🥚🥚`);
-        break;
-    case 'mesenton':
-        if (message.mentions.users.size < 1) return message.reply(malsintax1).catch(console.error);
-        message.channel.send(`**${user.username}** le ha dado un SENTOOOON MASIVO a **${message.author.username}** 😮😮😮😮`);
-        break;
-    case 'senton':
-        if (message.mentions.users.size < 1) return message.reply(malsintax1).catch(console.error);
-        message.channel.send(`**${message.author.username}** le haz dado un SENTOOOON MASIVO a **${user.username}** 😮😮😮😮🎇🎇🎇`);
-        break;
-    case 'nosenton':
-        message.channel.send('**No aceptas ni das sentones** 😄');
-        break;
-    case 'zorra':
-        if (message.mentions.users.size < 1) return message.reply(malsintax1).catch(console.error);
-        message.channel.send(`Tremenda(o) Zorra(o) Eres **${user.username}** 🦨`);
-        break;
-    case 'verguiza':
-        if (message.mentions.users.size < 1) return message.reply(malsintax1).catch(console.error);
-        message.channel.send(`**${message.author.username}** le ha dado una putiza a **${user.username}** 👊🏻👊🏻`);
-        break;
-    case 'deslechar':
-        if (message.mentions.users.size < 1) return message.reply(malsintax1).catch(console.error);
-        message.channel.send(`**${user.username}** ha deslechado a **${message.author.username}**`);
-        break;
-        // End Commands Troll
         // avatar
     case 'avatar':
         message.reply({
@@ -659,23 +610,6 @@ client.on('message', (message) => {
         }
     }
     // TERMINO DE AYUDA PARA ADMINISTRACION
-    // Ayuda
-    if (message.content.startsWith(prefix + 'trollfriends')) {
-        message.channel.send('**COMANDOS TROLL PARA LOS AMIGOS**\n```\n' +
-            '👉🏻 ' + prefix + 'fckyou   :: Le das amor a tu oponente.\n' +
-            '👉🏻 ' + prefix + 'csmr     :: Le sacas la csmr a tu oponente.\n' +
-            '👉🏻 ' + prefix + 'zorra    :: Insultas a tu oponente por Zorra(o).\n' +
-            '👉🏻 ' + prefix + 'ctm      :: Mandas a chingar a su madre a tu oponente.\n' +
-            '👉🏻 ' + prefix + 'senton   :: Darle un senton a tu oponente.\n' +
-            '👉🏻 ' + prefix + 'mesenton   :: Obligar a que te de un senton tu oponente.\n' +
-            '👉🏻 ' + prefix + 'nosenton   :: No dar ni recibir sentones.\n' +
-            '👉🏻 ' + prefix + '🥚🥚      :: Huevos para tu oponente.\n' +
-            '👉🏻 ' + prefix + 'blowjob   :: Darle cariño a tu oponente.\n' +
-            '👉🏻 ' + prefix + 'verguiza   :: Darle una verguiza a tu oponente.\n' +
-            '👉🏻 ' + prefix + 'deslechar   :: Tu oponente te deslecha.\n' +
-            '👉🏻 ' + prefix + 'noblow    :: No aceptar el cariño de tu oponente.\n```\n');
-    }
-    // Termino de ayuda
     if (message.content.startsWith(prefix + 'programmers')) {
         message.channel.send('**COMANDOS PARA PROGRAMADORES**\n```\n' +
             '👉🏻 ' + prefix + 'codehtml   :: codigo html.\n' +
